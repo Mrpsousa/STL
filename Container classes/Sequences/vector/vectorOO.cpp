@@ -5,10 +5,14 @@ using namespace std;
 
 int main ()
 {
-    vector <Cliente> SS;
+    vector <Cliente*> *SS = new vector<Cliente*>;
+    vector <Cliente*> iterator it = SS.begin();
+    
 
     Cliente *A = new Cliente;
     Cliente *B = new Cliente;
+    Cliente *C = new Cliente;
+    Cliente *D = new Cliente;
 
     A->setClienteNome("Maria");
     A->setClienteFone("1234567");
@@ -18,9 +22,25 @@ int main ()
     B->setClienteNome("Mario");
     B->setClienteFone("999567");
     B->setClienteCpf("88884321");
+
+    C->setClienteNome("Toin");
+    C->setClienteFone("77767");
+    C->setClienteCpf("0004321");
+
+    D->setClienteNome("Flavio");
+    D->setClienteFone("323367");
+    D->setClienteCpf("2223531");
     
-    SS.push_back(Cliente &A);
-    SS.push_back(Cliente &B);
-    SS.push_back();
+    SS->push_back(A);
+    SS->push_back(B);
+    SS->push_back(C);
+    SS->push_back(D);
+
+    for (vector<Cliente*>::iterator *it = SS.begin() ; it != SS.end(); ++it)
+    {
+        cout << ' ' << *it;
+    }
+    
+    
     return 0;
 }
