@@ -1,6 +1,6 @@
 #include <vector>
 #include "biblioteca.h"
-
+//ref:http://www.cplusplus.com/reference/vector/vector/
 using namespace std;
 
 int main ()
@@ -36,11 +36,15 @@ int main ()
     SS->push_back(C);
     SS->push_back(D);
 
-    for (vector<Cliente*>::iterator *it = SS.begin() ; it != SS.end(); ++it)
+    for (vector<Cliente*>::iterator it = SS.begin() ; it != SS.end(); ++it)
     {
         cout << ' ' << *it;
     }
     
+     vector<string>::const_iterator cii;
+
+   for(cii=SS.begin(); cii!=SS.end(); cii++)
+
     
     return 0;
 }
