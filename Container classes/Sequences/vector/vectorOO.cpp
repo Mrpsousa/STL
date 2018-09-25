@@ -1,50 +1,47 @@
 #include <vector>
-#include "biblioteca.h"
+#include <iostream>
+#include <string.h>
 //ref:http://www.cplusplus.com/reference/vector/vector/
 using namespace std;
 
+class Cliente
+{
+    public:
+    string Nome;
+    string cpf;
+
+    Cliente (string n, string n1){
+        this->Nome = n;
+        this->cpf = n1;
+    }
+   void show(void);
+};
+
+void Cliente::show(void)
+{
+    cout << " " << Nome << " " << cpf<< endl;
+}
+
 int main ()
 {
-    vector <Cliente*> *SS = new vector<Cliente*>;
-    vector <Cliente*> iterator it = SS.begin();
-    
+    //vector <Cliente*> *SS = new vector<Cliente*>;
+    vector <Cliente> SS;// = new vector<Cliente>;
 
-    Cliente *A = new Cliente;
-    Cliente *B = new Cliente;
-    Cliente *C = new Cliente;
-    Cliente *D = new Cliente;
+    Cliente A("maria", "123");
+    Cliente B("Mario", "987663");
+    Cliente C("Joao", "1563");
+    Cliente D("marcia", "098");
 
-    A->setClienteNome("Maria");
-    A->setClienteFone("1234567");
-    A->setClienteCpf("87654321");
+    SS.push_back(A);
+    SS.push_back(B);
+    SS.push_back(C);
+    SS.push_back(D);
+    //for(vector<Shapes>::iterator iter =listOfshapes.begin() ;iter != listOfshapes.end();iter++)
 
-
-    B->setClienteNome("Mario");
-    B->setClienteFone("999567");
-    B->setClienteCpf("88884321");
-
-    C->setClienteNome("Toin");
-    C->setClienteFone("77767");
-    C->setClienteCpf("0004321");
-
-    D->setClienteNome("Flavio");
-    D->setClienteFone("323367");
-    D->setClienteCpf("2223531");
-    
-    SS->push_back(A);
-    SS->push_back(B);
-    SS->push_back(C);
-    SS->push_back(D);
-
-    for (vector<Cliente*>::iterator it = SS.begin() ; it != SS.end(); ++it)
+    for (vector<Cliente>::iterator it = SS.begin(); it != SS.end(); ++it)
     {
-        cout << ' ' << *it;
+        it->show();
     }
-    
-     vector<string>::const_iterator cii;
 
-   for(cii=SS.begin(); cii!=SS.end(); cii++)
-
-    
     return 0;
 }
