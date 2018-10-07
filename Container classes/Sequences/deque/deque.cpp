@@ -1,4 +1,4 @@
-#include <vector>
+#include <deque>
 #include <iostream>
 #include <string.h>
 //ref:http://www.cplusplus.com/reference/vector/vector/
@@ -25,8 +25,8 @@ void Cliente::show(void)
 
 int main ()
 {
-    vector <Cliente> SS;// = new vector<Cliente>;
-    vector<int> ii;
+    deque<Cliente> SS;// = new deque<Cliente>;
+    deque<int> ii;
 
     Cliente A("maria", "123");
     Cliente B("Mario", "987663");
@@ -43,24 +43,24 @@ int main ()
     ii.push_back(30);
     ii.push_back(40);
 
-    cout << "Vector 'Classe' " << endl;
-    for (vector<Cliente>::iterator it = SS.begin(); it != SS.end(); ++it)
+    cout << "Deque 'Classe' " << endl;
+    for (deque<Cliente>::iterator it = SS.begin(); it != SS.end(); ++it)
     {
         it->show();
     }
 
-    cout << "Vector int " << endl;
-    for (vector<int>::iterator iit = ii.begin(); iit != ii.end(); ++iit)
+    cout << "Deque int " << endl;
+    for (deque<int>::iterator iit = ii.begin(); iit != ii.end(); ++iit)
     {
        cout << *iit << endl;
     }
-
+/*
     vector<Cliente>::iterator it = SS.begin();
     cout << "Inicio do vector classe" << endl;
     it->show();
     it = SS.end();
-    /*cout << "Final" << endl;
-    it->show();*/
+    cout << "Final" << endl;
+    it->show();
     cout << "Tamanho de SS" << endl;
     cout << SS.size() << endl;
     if(SS.empty())
@@ -96,7 +96,7 @@ int main ()
        cout << *iit << endl;
     }
 
-
+*/
     
     return 0;
 }
