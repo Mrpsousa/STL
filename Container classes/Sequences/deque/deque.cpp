@@ -3,6 +3,11 @@
 #include <string.h>
 //ref:http://www.cplusplus.com/reference/vector/vector/
 
+/*
+Quando escolher o deque sobre o vetor: Deve-se escolher o deque sobre o vetor se ele quiser adicionar ou
+ excluir ambos os fins, como implementar uma Fila. Quando escolher vetor sobre deque: Deve-se escolher 
+ vetor se a inserção ou exclusões forem necessárias principalmente no final, como implementar uma pilha.
+*/
 using namespace std;
 
 class Cliente

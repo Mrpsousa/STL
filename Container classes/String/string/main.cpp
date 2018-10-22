@@ -4,30 +4,32 @@
 using namespace std;
 
 int main (){
-    string nome1, nome2;
-    string teste1 = "Maria";
-    string teste2 = "Joao";
+    string str1 = "Maria01";
+    string str2 = "Joao02";
 
-    nome1.append(teste1);
-    nome2.append("TOINHO");
-    nome1+= teste2;
-    cout << nome1.size() << endl;
-    cout << nome1 << endl;
-    cout << nome2 << endl;
+    cout << str1 << endl;
+    cout << str2 << endl;
 
-    //TODO
+    
     // Iterator
     //begin
     //end
-   
+   string::iterator it=str1.begin(); it!=str1.end(); //pode ser usado no 'for'
+   cout << it[0] <<endl;
     
-    //TODO
     //Capacity
     //size
     //length
+    cout << "size: " << str1.size() << "\n";
+    cout << "length: " << str1.length() << "\n";
+    cout << "capacity: " << str1.capacity() << "\n";
     //clear
+    str1.clear();
+    cout << "Conteudo de str1 depois do clear:" <<str1 << endl;
+    cout << "size: " << str1.size() << "\n";
     //empty
-    //shrink_to_fit
+    cout << "Empty? 1-sim    2-não : " << str1.empty() << "\n";
+
 
     //TODO
     //Element access
